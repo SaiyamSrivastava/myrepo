@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::Serverless-2016-10-31'
+Description: AuthorizerUnderscorefunctionNestedStack nested stack
+Resources:
+  AuthorizerUnderscorefunctionLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda/authorize.lambda_handler
+      Runtime: nodejs12.x
+      InlineCode: |
+        def handler(event, context):
+        print("Hello, world!")
+      FunctionName: test123
+      MemorySize: 130
+      Role: "arn:aws:iam::756851511860:role/service-role/S3HouseKeepingLambda-role-22pml4h6"
+      Timeout: 10
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-07abaaef3d2acff8c
+        SubnetIds:
+          - subnet-08438920129839431
+          - subnet-05026b206eecbf994
+
