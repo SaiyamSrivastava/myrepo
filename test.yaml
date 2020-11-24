@@ -9,15 +9,14 @@ Resources:
       Runtime: nodejs12.x
       InlineCode: |
         def handler(event, context):
-        print("Hello, world!")
       FunctionName: test123
       MemorySize: 130
       Role: "arn:aws:iam::756851511860:role/service-role/S3HouseKeepingLambda-role-22pml4h6"
       Timeout: 10
       VpcConfig:
         SecurityGroupIds:
-          - sg-0cb0452e3c4b0dcc0
+          - sg-07abaaef3d2acff8c
         SubnetIds:
-          - subnet-054a413783353f960
+          - subnet-08438920129839431
           - subnet-05026b206eecbf994
 
