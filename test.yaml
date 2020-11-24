@@ -16,8 +16,8 @@ Resources:
       Timeout: 10
       VpcConfig:
         SecurityGroupIds:
-          - sg-07abaaef3d2acff8c
+          - sg-0cb0452e3c4b0dcc0
         SubnetIds:
-          - subnet-08438920129839431
+          - subnet-054a413783353f960
           - subnet-05026b206eecbf994
 
